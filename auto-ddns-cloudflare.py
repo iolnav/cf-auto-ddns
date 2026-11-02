@@ -302,7 +302,9 @@ def generate_bash_script(cfg: dict) -> Path:
         )
 
         # ── Log rotation: tách log mới sau mỗi 3 ngày ─────────────
-        LOG_DIR="{log_dir_str}"
+        # LOG_DIR luôn tính tương đối từ vị trí của script này
+        SCRIPT_DIR="$(cd "$(dirname "${{BASH_SOURCE[0]}}")" && pwd)"
+        LOG_DIR="$SCRIPT_DIR/log"
         mkdir -p "$LOG_DIR"
 
         _log_file() {{
@@ -338,7 +340,7 @@ def generate_bash_script(cfg: dict) -> Path:
             local ip
             for url in "https://ipv4.icanhazip.com" "https://api.ipify.org" "https://ifconfig.me/ip"; do
                 ip=$(curl -s -4 --max-time 5 "$url" | tr -d '[:space:]')
-                if [[ "$ip" =~ ^([0-9]{{1,3}}\\.{{3}})[0-9]{{1,3}}$ ]]; then
+                if [[ "$ip" =~ ^([0-9]{{1,3}}\.){{3}}[0-9]{{1,3}}$ ]]; then
                     echo "$ip"
                     return 0
                 fi
@@ -679,3 +681,4 @@ if __name__ == "__main__":
         cli_mode(sys.argv[1:])
     else:
         interactive_mode()
+
