@@ -1,0 +1,11 @@
+# Git — những file nhạy cảm / tạo tự động không nên commit
+data.json
+log/
+cf-ddns-run.sh
+*.sh
+!cf-ddns.sh
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
