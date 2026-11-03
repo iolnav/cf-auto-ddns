@@ -46,7 +46,7 @@ def banner():
     print(f"""
 {C.CYAN}{C.BOLD}╔══════════════════════════════════════════════════════╗
 ║     Cloudflare Auto DDNS Tool  v2.0                  ║
-║     Tự động cập nhật DNS Cloudflare theo IP WAN       ║
+║     Tự động cập nhật DNS Cloudflare theo IP WAN      ║
 ╚══════════════════════════════════════════════════════╝{C.RESET}
 """)
 
