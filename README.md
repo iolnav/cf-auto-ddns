@@ -39,7 +39,7 @@ Tool là phiên bản **v2.0** — được viết lại từ script Bash gốc 
 #### 1. Clone & cấp quyền
 
 ```bash
-git clone https://github.com/your-user/cf-auto-ddns.git
+git clone https://github.com/iolnav/cf-auto-ddns.git
 cd cf-auto-ddns
 chmod +x auto-ddns-cloudflare.py
 ```
@@ -172,7 +172,7 @@ This is **v2.0** — a full rewrite of the original Bash script [`cf-ddns.sh`](.
 #### 1. Clone & set permissions
 
 ```bash
-git clone https://github.com/your-user/cf-auto-ddns.git
+git clone https://github.com/iolnav/cf-auto-ddns.git
 cd cf-auto-ddns
 chmod +x auto-ddns-cloudflare.py
 ```
